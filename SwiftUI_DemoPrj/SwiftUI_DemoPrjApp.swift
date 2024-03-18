@@ -9,12 +9,11 @@ import SwiftUI
 
 @main
 struct SwiftUI_DemoPrjApp: App {
-    let persistenceController = PersistenceController.shared
 
+    //MARK: -- 앱이 실행될 때 앱의 진입점을 알려주는 곳
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
